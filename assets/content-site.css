@@ -44,6 +44,10 @@ html[lang^="zh"] .masthead .brand-lockup-img {width:130.58825917px;height:42px}
 .content-page .site-footer {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:24px 48px;background:#111412;color:#b6c2b8;font-size:13px}
 .content-page .footer-links {display:flex;flex-wrap:wrap;gap:8px 28px}
 .content-page .footer-links a {display:flex;align-items:center;min-height:44px;font-size:14px;text-decoration:none}
+.footer-links .discord-link {display:inline-flex;align-items:center;gap:8px}
+.footer-links .discord-link img {display:block;flex:none;width:20px;height:15px}
+.reading-body .discord-contact-link {display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:600}
+.reading-body .discord-contact-link img {display:block;flex:none;width:24px;height:18px}
 .content-page .site-footer a:hover {color:var(--cream)}
 .content-skip {position:fixed;z-index:100;left:16px;top:-80px;padding:12px 16px;background:var(--cream)}
 .content-skip:focus {top:12px}

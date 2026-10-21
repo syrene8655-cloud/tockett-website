@@ -37,6 +37,8 @@
 .site-footer {gap: 24px; flex-wrap: wrap}
 .footer-links {display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px}
 .footer-links a {display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: #b6c2b8}
+.footer-links .discord-link {gap: 8px}
+.footer-links .discord-link img {display: block; flex: none; width: 20px; height: 15px}
 .help-section a:focus-visible, .help-section summary:focus-visible, .footer-links a:focus-visible, .tutorial-dialog :focus-visible {outline: 2px solid var(--forest); outline-offset: 5px}
 .footer-links a:focus-visible {outline-color: var(--cream)}
 .tutorial-dialog {margin: auto; padding: 0; width: min(430px, calc(100vw - 32px)); max-height: calc(100svh - 32px); border: 0; background: var(--paper); color: var(--ink); overflow: auto}

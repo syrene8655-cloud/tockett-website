@@ -1,0 +1,62 @@
+/* Original static-site implementation of the publicly demonstrated card-to-modal interaction. */
+.editor-modal-trigger {display:block;width:100%;appearance:none;cursor:zoom-in;text-align:initial;color:inherit}
+.editor-modal-trigger:focus-visible {outline:2px solid var(--orange);outline-offset:-3px}
+.editor-modal-trigger .editor-expand-icon {
+  display:block;top:auto;left:auto;right:12px;bottom:12px;width:32px;height:32px;
+  padding:8px;border-radius:50%;background:var(--cream);color:var(--forest);transform:none;
+  box-shadow:0 2px 12px #0003;
+}
+.media-card.media-hover:hover .editor-expand-icon {transform:none}
+.editor-modal-source .media-visual,.editor-modal-source .media-embed {visibility:hidden}
+.editor-image-modal {
+  position:fixed;inset:0;margin:0;border:0;padding:24px;
+  width:100%;height:100dvh;max-width:none;max-height:none;
+  background:transparent;color:var(--cream);overflow:hidden;
+}
+.editor-image-modal[open] {display:grid;place-items:center}
+.editor-image-modal::backdrop {background:transparent}
+.editor-modal-backdrop {
+  position:fixed;inset:0;
+  background:radial-gradient(ellipse at 50% 100%,#20382dbb,transparent 65%),#000b;
+  backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+}
+.editor-modal-card {
+  position:relative;z-index:1;display:flex;flex-direction:column;
+  width:min(600px,100%);max-height:calc(100dvh - 48px);
+  border:1px solid #f1eddb26;border-radius:16px;overflow:hidden;
+  background:#101914;box-shadow:0 24px 100px #0008;
+}
+.editor-modal-header {display:flex;align-items:center;gap:16px;padding:14px 16px 14px 20px;flex:none}
+.editor-modal-heading {flex:1;min-width:0}
+.editor-modal-actions {display:flex;align-items:center;gap:8px;flex:none}
+.editor-modal-actions .promo-audio {flex:none;width:44px;min-width:44px;min-height:44px;margin:0;padding:0;justify-content:center}
+.editor-modal-actions .promo-audio span {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.editor-modal-actions .promo-audio[aria-pressed="false"] {color:var(--cream);border-color:#f1eddb66}
+.editor-modal-title {margin:0;font:600 18px/1.45 -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;text-wrap:balance}
+.editor-modal-hint {margin:4px 0 0;color:#b7c7be;font-size:12px;line-height:1.5}
+.editor-modal-close {
+  display:grid;place-items:center;width:44px;height:44px;flex:none;padding:0;border:0;
+  border-radius:50%;background:#f1eddb16;color:var(--cream);
+}
+.editor-modal-close:hover {background:#f1eddb2b}
+.editor-modal-close:focus-visible,.editor-modal-scroll:focus-visible {outline:2px solid var(--orange);outline-offset:-3px}
+.editor-modal-close svg {width:20px;height:20px;pointer-events:none}
+.editor-modal-scroll {min-height:0;overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y pinch-zoom;scrollbar-width:thin;scrollbar-color:#87978b #101914}
+.editor-modal-image {display:block;width:100%;height:auto;object-fit:contain;background:#000}
+.editor-modal-image[hidden],.editor-modal-player[hidden],.editor-modal-description[hidden] {display:none}
+.editor-modal-player {position:relative;width:100%;background:#000}
+.editor-modal-player .media-embed {width:100%;height:100%;transform:none}
+.editor-modal-player video,.editor-modal-player .promo-poster {object-fit:contain;object-position:center}
+.editor-modal-video .editor-modal-scroll {overflow:hidden;flex:none}
+.editor-modal-description {margin:0;padding:20px 24px 24px;color:#d2dace;font-size:15px;line-height:1.65}
+.editor-modal-morph {position:fixed;z-index:2;overflow:hidden;background:#000;pointer-events:none}
+.editor-modal-morph img,.editor-modal-morph canvas {position:absolute;display:block;max-width:none;pointer-events:none}
+@media(max-width:767px) {
+  .editor-image-modal {padding:16px}
+  .editor-modal-card {max-height:calc(100dvh - 32px);border-radius:14px}
+  .editor-modal-header {gap:12px;padding:10px 12px 10px 16px}
+  .editor-modal-title {font-size:16px}
+  .editor-modal-description {padding:16px;font-size:14px}
+}
+
+.editor-modal-wide .editor-modal-card {width:min(1120px,100%)}

@@ -1,0 +1,37 @@
+/* React Bits Sticker Peel. License: licenses/react-bits-LICENSE.txt. */
+.sticker-peel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.sticker-peel-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sticker-peel-hit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  pointer-events: auto;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-decoration > img { display: block; width: 100%; height: auto; pointer-events: none; }
+.hero-decoration.peel-ready > img { visibility: hidden; }
+.hero-decoration[data-peel-state="peeling"], .hero-decoration[data-peel-state="pressed"] { z-index: 3; }
+.sticker-peel-hit { appearance: none; padding: 0; border: 0; background: transparent; border-radius: 8px; cursor: pointer; }
+.sticker-peel-hit:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .sticker-peel { display: none; }
+  .hero-decoration.peel-ready > img { visibility: visible; }
+}

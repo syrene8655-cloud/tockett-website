@@ -1,0 +1,94 @@
+.help-section {
+  padding: 64px 0 72px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.help-layout {
+  width: min(1528px, calc(100% - 96px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(240px, .8fr) minmax(0, 2.2fr);
+  gap: 48px;
+  align-items: start;
+}
+.help-intro h2 {margin: 0 0 16px; font-size: 32px; line-height: 1.3; font-weight: 600; letter-spacing: -.02em}
+.help-intro p {margin: 0; max-width: 24em; font-size: 15px; line-height: 1.7; color: var(--muted)}
+.help-keep {white-space: nowrap}
+.help-body {min-width: 0}
+.help-body h3 {margin: 0 0 20px; font-size: 22px; line-height: 1.4; font-weight: 600}
+.tutorial-list, .faq-list {border-top: 1px solid #c9ccc3}
+.tutorial-link {display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; padding: 18px 0; border-bottom: 1px solid #c9ccc3}
+.tutorial-copy {display: grid; gap: 6px}
+.tutorial-title {font-size: 17px; line-height: 1.5; font-weight: 600}
+.tutorial-duration {font-size: 14px; line-height: 20px; color: var(--muted)}
+.tutorial-action {flex: none; font-size: 14px; line-height: 20px; white-space: nowrap; text-decoration: underline; text-underline-offset: 4px}
+.tutorial-action span {display: inline-block; margin-left: 6px}
+.faq {margin-top: 40px; scroll-margin-top: 16px}
+.faq-item {border-bottom: 1px solid #c9ccc3}
+.faq-item summary {display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 68px; padding: 20px 0; cursor: pointer; list-style: none; font-size: 16px; line-height: 1.6; font-weight: 500}
+.faq-item summary::-webkit-details-marker {display: none}
+.faq-mark {position: relative; width: 16px; height: 16px; flex: none}
+.faq-mark::before, .faq-mark::after {content: ''; position: absolute; background: currentColor}
+.faq-mark::before {left: 0; top: 7px; width: 16px; height: 1.5px}
+.faq-mark::after {left: 7px; top: 0; width: 1.5px; height: 16px}
+.faq-item[open] .faq-mark::after {display: none}
+.faq-answer {padding: 0 40px 24px 0; max-width: 70ch}
+.faq-answer p {margin: 0; font-size: 15px; line-height: 1.75; color: var(--muted)}
+.site-footer {gap: 24px; flex-wrap: wrap}
+.footer-links {display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px}
+.footer-links a {display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: #b6c2b8}
+.help-section a:focus-visible, .help-section summary:focus-visible, .footer-links a:focus-visible, .tutorial-dialog :focus-visible {outline: 2px solid var(--forest); outline-offset: 5px}
+.footer-links a:focus-visible {outline-color: var(--cream)}
+.tutorial-dialog {margin: auto; padding: 0; width: min(430px, calc(100vw - 32px)); max-height: calc(100svh - 32px); border: 0; background: var(--paper); color: var(--ink); overflow: auto}
+.tutorial-dialog::backdrop {background: #10231bd9}
+.tutorial-dialog-header {display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px}
+.tutorial-dialog-header h2 {margin: 0; font-size: 17px; line-height: 1.5; font-weight: 600}
+.tutorial-close {display: grid; place-items: center; flex: none; width: 44px; height: 44px; color: var(--forest)}
+.tutorial-close svg {width: 20px; height: 20px}
+.tutorial-dialog video {display: block; width: 100%; height: min(66svh, 580px); object-fit: contain; background: #000}
+.tutorial-error {padding: 16px; font-size: 14px; line-height: 1.6}
+.tutorial-error a {text-decoration: underline; text-underline-offset: 3px}
+@media (hover: hover) and (pointer: fine) {
+  .tutorial-link:hover .tutorial-title, .faq-item summary:hover {color: #415f4c}
+}
+.privacy-page {--forest: #20382d; --cream: #f1eddb; --paper: #e9e8e2; --ink: #26392f; --muted: #656565; margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", sans-serif}
+.privacy-page, .privacy-page * {box-sizing: border-box}
+.privacy-page a {color: inherit; text-underline-offset: 4px}
+.privacy-page a:focus-visible {outline: 2px solid currentColor; outline-offset: 5px}
+.privacy-masthead {display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 80px; padding: 12px 48px; background: #000; color: var(--cream)}
+.privacy-masthead img {display: block; max-width: 100%; height: auto}
+.privacy-masthead nav {display: flex; flex-wrap: wrap; gap: 24px}
+.privacy-masthead a, .privacy-footer a {display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration: none}
+.privacy-content {width: min(760px, calc(100% - 96px)); margin: 0 auto; padding: 64px 0 72px}
+.privacy-content h1 {margin: 0 0 16px; font-size: 36px; line-height: 1.3; font-weight: 600; letter-spacing: -.02em}
+.privacy-content h2 {margin: 36px 0 12px; font-size: 20px; line-height: 1.5; font-weight: 600}
+.privacy-content p {margin: 0; font-size: 16px; line-height: 1.85; overflow-wrap: break-word}
+.privacy-content .privacy-date {color: var(--muted); font-size: 14px}
+.privacy-footer {display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 48px; background: #111412; color: #b6c2b8; font-size: 13px}
+@media (max-width: 991px) {
+  .help-layout {width: calc(100% - 48px); grid-template-columns: 1fr; gap: 32px}
+  .help-intro p {max-width: 44em}
+  .privacy-masthead {padding-inline: 24px}
+  .privacy-content {width: min(760px, calc(100% - 48px))}
+}
+@media (max-width: 767px) {
+  .help-section {padding: 40px 0 48px}
+  .help-layout {width: calc(100% - 32px); gap: 28px}
+  .help-intro h2 {font-size: 26px; margin-bottom: 12px}
+  .help-body h3 {font-size: 20px; margin-bottom: 16px}
+  .tutorial-link {gap: 16px; min-height: 88px; padding: 16px 0}
+  .tutorial-title {font-size: 16px}
+  .tutorial-action {line-height: 1.5}
+  .faq {margin-top: 32px}
+  .faq-item summary {gap: 16px; padding: 18px 0; font-size: 16px}
+  .faq-answer {padding-right: 0}
+  .site-footer {padding: 20px 16px; gap: 12px}
+  .footer-links {width: 100%; gap: 4px 20px}
+  .footer-links a {font-size: 14px}
+  html[lang^="en"] .nav-item[href="#help"] {flex: 1}
+  .privacy-masthead {padding: 12px 20px; flex-wrap: wrap; gap: 8px}
+  .privacy-masthead nav {gap: 24px}
+  .privacy-content {width: calc(100% - 32px); padding: 40px 0 48px}
+  .privacy-content h1 {font-size: 28px}
+  .privacy-footer {padding: 20px 16px; flex-wrap: wrap; gap: 12px}
+}

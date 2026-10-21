@@ -1,0 +1,22 @@
+{
+  "desktop-help": {
+    "video_sha256": "0a32315cf0e7ac939e3c799e6d2e96e4aa16454c7820f5df7e63badd2136b91a",
+    "poster_sha256": "92e8d2057b57094675b81c6b67abd0dff8e0c1fb1af0bba0a1f1e43c3bf7bff5",
+    "frame": "first decoded video frame; original recording unchanged"
+  },
+  "lock-help": {
+    "video_sha256": "8c46204ad1099643d0b5850a5b21feee3870ee84c195384a34a9e07ab2385a8f",
+    "poster_sha256": "cf23afac1ca4b6b277b7adbae0678fb32ab83e09e00dfe8738991eb3ab12293d",
+    "frame": "first decoded video frame; original recording unchanged"
+  },
+  "desktop-help-en": {
+    "video_sha256": "e19170cba16d39960fed854a7fdbf2811e19f25b6e2e6d84394d50d98b556a69",
+    "poster_sha256": "cce85c2adb23e7c966ec0e7472ac52d19131848e7793255375e3cd8195a56c9a",
+    "frame": "first decoded video frame; original recording unchanged"
+  },
+  "lock-help-en": {
+    "video_sha256": "efd770b9d30ed1574916f9db44acbfc3566a56956ecadece408c881f9f9560a9",
+    "poster_sha256": "336abcbe6e78a5f7a6e447fbbbe01e5d30e9ea7da6ae2018e16880cc8163cec9",
+    "frame": "first decoded video frame; original recording unchanged"
+  }
+}

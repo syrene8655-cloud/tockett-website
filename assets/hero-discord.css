@@ -1,0 +1,27 @@
+.hero-cta-row {
+  display: grid;
+  grid-template-columns: 44px auto 44px;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 6px;
+}
+
+.hero-cta-row::before { content: ""; }
+.hero-cta-row .cta-button { margin-top: 0; }
+
+.hero-discord-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.hero-discord-link img { display: block; width: 28px; height: 21px; }
+.hero-discord-link:hover { background: rgba(241, 237, 219, .12); }
+.hero-discord-link:focus-visible { outline: 2px solid #ff973d; outline-offset: 2px; }
+
+@media (max-width: 767px) {
+  .hero-cta-row { margin-top: 4px; }
+}

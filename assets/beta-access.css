@@ -1,4 +1,4 @@
-/* Native non-modal help opens from the cream speech bubble near the wordmark. */
+/* Shared beta button and product-page installation steps. */
 .beta-actions {position:relative;display:inline-block;flex:none}
 .beta-actions a {text-decoration:none;cursor:pointer}
 /* One orange fill inside the continuous white sticker edge. */
@@ -12,22 +12,9 @@
 .hero .beta-actions {order:1}
 .cta-apple {display:block;flex:none;width:1.25em;height:1.25em;color:#fff}
 .cta-label {position:relative}
-.beta-help-button {position:absolute;z-index:5;right:0;top:-56px;display:block;min-height:44px;padding:10px 18px;border:0;border-radius:18px 18px 18px 7px;background:var(--cream);color:var(--forest);font:600 16px/1.35 -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;text-align:center;white-space:nowrap;text-decoration:none;cursor:pointer;transform:rotate(-4deg);pointer-events:auto}
-.beta-help-button::after {content:"";position:absolute;left:16px;top:calc(100% - 1px);width:15px;height:12px;background:inherit;clip-path:polygon(0 0,100% 0,0 100%)}
-.hero .beta-help-button {right:70px;top:calc(-44px / .75);font-size:calc(15px / .75);min-height:calc(44px / .75);padding:12px 20px}
-.beta-actions a:hover,.beta-help-button:hover,.content-download .content-download-button:hover {text-decoration:none}
+.beta-actions a:hover,.content-download .content-download-button:hover {text-decoration:none}
 .hero .beta-actions .cta-button:active,.content-download .content-download-button:active {box-shadow:0 1px 3px #07190f30}
-.beta-actions a:focus-visible,.beta-help-button:focus-visible,.beta-guide a:focus-visible,.beta-guide-close:focus-visible {outline:3px solid var(--orange);outline-offset:4px}
-.beta-guide {position:fixed;inset:0;width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);box-sizing:border-box;margin:auto;padding:20px 24px 24px;border:1px solid #87958b;border-radius:12px;background:var(--cream);color:var(--forest);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;font-size:16px;line-height:1.6;text-align:left;overflow:auto;box-shadow:0 12px 36px #0003}
-.beta-guide::backdrop {background:transparent}
-.beta-guide-heading {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-.beta-guide-heading h2 {margin:0;font:600 20px/1.35 -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;letter-spacing:0}
-.beta-guide-close {flex:none;width:44px;height:44px;margin:-8px -12px -8px 0;border:0;border-radius:50%;background:transparent;color:inherit;font:400 28px/1 sans-serif;cursor:pointer}
-.beta-guide ol {margin:0;padding-left:24px;list-style:decimal}
-.beta-guide li {padding-left:4px;margin:0 0 16px}
-.beta-guide li:last-child {margin-bottom:0}
-.beta-guide a {color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:600}
-.beta-guide .beta-guide-note {margin:20px 0 0;padding-top:16px;border-top:1px solid #26392f33;font-size:14px;line-height:1.6;color:inherit}
+.beta-actions a:focus-visible {outline:3px solid var(--orange);outline-offset:4px}
 .content-download .content-download-button {cursor:pointer;text-decoration:none}
 .beta-inline-help {margin-top:12px}
 .beta-inline-help summary {min-height:44px;padding:10px 0;font-size:15px;line-height:24px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
@@ -36,10 +23,5 @@
 .beta-inline-steps a {font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .beta-inline-steps .beta-guide-note {font-size:14px;line-height:1.6}
 @media(max-width:767px) {
-  /* Reserve breathing room for the bubble while keeping the original scene together. */
-  .hero-stage {--beta-bubble-room:40px;height:calc(530.460083 * var(--mobile-unit) + var(--mobile-flow-offset) + var(--beta-bubble-room))}
-  .hero-copy,.hero-device {translate:0 var(--beta-bubble-room)}
   .hero .beta-actions .cta-button {border-width:3px;font-size:19px;width:180px}
-  .hero .beta-help-button {right:12px;top:calc(4px - var(--beta-bubble-room));max-width:145px;min-height:44px;padding:8px 14px;font-size:14px;white-space:normal}
-  .beta-help-continuation {display:block}
 }

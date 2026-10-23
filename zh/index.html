@@ -637,7 +637,7 @@ a:focus-visible,button:focus-visible,.media-track:focus-visible {outline:3px sol
 <link rel="stylesheet" href="../assets/editor-modal-cards.css?v=20261021-screenshots"/>
 <script src="../assets/editor-modal-cards.js?v=20261021-copy1" defer></script>
 <link rel="stylesheet" href="../assets/homepage-help.css?v=20261021"/>
-<link rel="stylesheet" href="../assets/beta-access.css?v=9e8995196c3e">
+<link rel="stylesheet" href="../assets/beta-access.css?v=aa598d7fafa4">
 <link rel="stylesheet" href="../assets/content-site.css?v=20261021-language1">
 <link rel="stylesheet" href="../assets/stock-status.css?v=0e6be5964e7a"><!-- Content metadata start -->
 <meta name="description" content="咔哒 Tockett 是一款 iPhone 趣味时钟 App。首款机场牌以翻牌形式显示世界时间，支持桌面小组件、锁屏实况与灵动岛。查看操作演示、设置指南及一次购买的使用范围。">
@@ -659,7 +659,6 @@ a:focus-visible,button:focus-visible,.media-track:focus-visible {outline:3px sol
 <section class="hero" id="download">
 <div class="hero-stage">
 <div class="hero-copy">
-<!-- Beta bubble start --><button class="beta-help-button" type="button" popovertarget="beta-guide">如何参与内测</button><!-- Beta bubble end -->
 <h1 class="hero-title-wrap" aria-label="Tockett 咔哒">
 
 <div class="hero-center-art">
@@ -1016,6 +1015,5 @@ syncPromoAudio();
 const navLinks=[...document.querySelectorAll('.nav-pill-wrapper a')];
 function syncNav(){navLinks.forEach(a=>{const active=a.dataset.nav===({'#download':'download','#more-clocks':'more'}[location.hash]||'home');a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
 window.addEventListener('hashchange',syncNav);syncNav();
-</script><!-- Beta guide start --><section class="beta-guide" id="beta-guide" popover="auto" aria-labelledby="beta-guide-title"><header class="beta-guide-heading"><h2 class="beta-guide-title" id="beta-guide-title">如何参与内测</h2><button class="beta-guide-close" type="button" popovertarget="beta-guide" popovertargetaction="hide" aria-label="关闭教程">×</button></header><ol><li><a href="https://apps.apple.com/app/testflight/id899247664" target="_blank" rel="noopener">安装 TestFlight</a>：先在 iPhone 上安装 Apple 的测试 App。</li><li><a href="https://testflight.apple.com/join/uux9vRTU">接受咔哒邀请</a>：打开邀请，在 TestFlight 中点“接受”。</li><li>点“安装”，完成后打开咔哒即可体验。</li></ol><p class="beta-guide-note">已安装 TestFlight？直接打开咔哒邀请即可。请在 iPhone 上操作。</p></section><!-- Beta guide end -->
-<script src="../assets/content-site.js?v=20261021-language1" defer></script>
+</script><script src="../assets/content-site.js?v=20261021-language1" defer></script>
 <script src="../assets/stock-status.js?v=0e6be5964e7a" defer></script></body></html>

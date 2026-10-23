@@ -1,4 +1,4 @@
-/* Native non-modal help keeps the installation steps beside the beta action. */
+/* Native non-modal help opens from the cream speech bubble near the wordmark. */
 .beta-actions {position:relative;display:inline-block;flex:none}
 .beta-actions a {text-decoration:none;cursor:pointer}
 /* One orange fill inside the continuous white sticker edge. */
@@ -12,10 +12,9 @@
 .hero .beta-actions {order:1}
 .cta-apple {display:block;flex:none;width:1.25em;height:1.25em;color:#fff}
 .cta-label {position:relative}
-.beta-help-button {position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);min-height:44px;min-width:44px;padding:0 8px;border:0;background:transparent;color:inherit;font:inherit;font-size:14px;line-height:1.4;white-space:nowrap;text-decoration:none;cursor:pointer}
-.hero .beta-help-button {color:var(--cream);font-size:calc(14px / .75);min-height:calc(44px / .75);min-width:calc(44px / .75)}
-.beta-help-full {display:none}
-.beta-help-short {display:inline}
+.beta-help-button {position:absolute;z-index:5;right:0;top:-56px;display:block;min-height:44px;padding:10px 18px;border:0;border-radius:18px 18px 18px 7px;background:var(--cream);color:var(--forest);font:600 16px/1.35 -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;text-align:center;white-space:nowrap;text-decoration:none;cursor:pointer;transform:rotate(-4deg);pointer-events:auto}
+.beta-help-button::after {content:"";position:absolute;left:16px;top:calc(100% - 1px);width:15px;height:12px;background:inherit;clip-path:polygon(0 0,100% 0,0 100%)}
+.hero .beta-help-button {right:70px;top:calc(-44px / .75);font-size:calc(15px / .75);min-height:calc(44px / .75);padding:12px 20px}
 .beta-actions a:hover,.beta-help-button:hover,.content-download .content-download-button:hover {text-decoration:none}
 .hero .beta-actions .cta-button:active,.content-download .content-download-button:active {box-shadow:0 1px 3px #07190f30}
 .beta-actions a:focus-visible,.beta-help-button:focus-visible,.beta-guide a:focus-visible,.beta-guide-close:focus-visible {outline:3px solid var(--orange);outline-offset:4px}
@@ -37,8 +36,10 @@
 .beta-inline-steps a {font-weight:600;text-decoration:underline;text-underline-offset:3px}
 .beta-inline-steps .beta-guide-note {font-size:14px;line-height:1.6}
 @media(max-width:767px) {
+  /* Reserve breathing room for the bubble while keeping the original scene together. */
+  .hero-stage {--beta-bubble-room:40px;height:calc(530.460083 * var(--mobile-unit) + var(--mobile-flow-offset) + var(--beta-bubble-room))}
+  .hero-copy,.hero-device {translate:0 var(--beta-bubble-room)}
   .hero .beta-actions .cta-button {border-width:3px;font-size:19px;width:180px}
-  .hero .beta-help-button {font-size:14px;min-height:44px;left:calc(100% + 4px);padding:0 4px}
-  .hero .beta-help-full {display:none}
-  .hero .beta-help-short {display:inline}
+  .hero .beta-help-button {right:12px;top:calc(4px - var(--beta-bubble-room));max-width:145px;min-height:44px;padding:8px 14px;font-size:14px;white-space:normal}
+  .beta-help-continuation {display:block}
 }

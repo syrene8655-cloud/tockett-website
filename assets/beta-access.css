@@ -1,0 +1,32 @@
+/* Native non-modal help keeps the installation steps beside the beta action. */
+.beta-actions {position:relative;display:inline-block;flex:none}
+.beta-actions a {text-decoration:none;cursor:pointer}
+.hero .beta-actions .cta-button {opacity:1;cursor:pointer}
+.beta-help-button {position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);min-height:44px;min-width:44px;padding:0 8px;border:0;background:transparent;color:inherit;font:inherit;font-size:14px;line-height:1.4;white-space:nowrap;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.hero .beta-help-button {color:var(--cream);font-size:calc(14px / .75);min-height:calc(44px / .75);min-width:calc(44px / .75)}
+.beta-help-full {display:none}
+.beta-help-short {display:inline}
+.beta-actions a:hover,.beta-help-button:hover {text-decoration:underline;text-underline-offset:4px}
+.beta-actions a:focus-visible,.beta-help-button:focus-visible,.beta-guide a:focus-visible,.beta-guide-close:focus-visible {outline:3px solid var(--orange);outline-offset:4px}
+.beta-guide {position:fixed;inset:0;width:min(360px,calc(100vw - 32px));max-height:calc(100dvh - 32px);box-sizing:border-box;margin:auto;padding:20px 24px 24px;border:1px solid #87958b;border-radius:12px;background:var(--cream);color:var(--forest);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;font-size:16px;line-height:1.6;text-align:left;overflow:auto;box-shadow:0 12px 36px #0003}
+.beta-guide::backdrop {background:transparent}
+.beta-guide-heading {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.beta-guide-heading h2 {margin:0;font:600 20px/1.35 -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC",sans-serif;letter-spacing:0}
+.beta-guide-close {flex:none;width:44px;height:44px;margin:-8px -12px -8px 0;border:0;border-radius:50%;background:transparent;color:inherit;font:400 28px/1 sans-serif;cursor:pointer}
+.beta-guide ol {margin:0;padding-left:24px;list-style:decimal}
+.beta-guide li {padding-left:4px;margin:0 0 16px}
+.beta-guide li:last-child {margin-bottom:0}
+.beta-guide a {color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.beta-guide .beta-guide-note {margin:20px 0 0;padding-top:16px;border-top:1px solid #26392f33;font-size:14px;line-height:1.6;color:inherit}
+.content-download .content-download-button {cursor:pointer;text-decoration:none}
+.beta-inline-help {margin-top:12px}
+.beta-inline-help summary {min-height:44px;padding:10px 0;font-size:15px;line-height:24px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.beta-inline-steps {font-size:16px;line-height:1.6;padding-top:8px}
+.beta-inline-steps ol {margin:0;padding-left:24px}
+.beta-inline-steps a {font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.beta-inline-steps .beta-guide-note {font-size:14px;line-height:1.6}
+@media(max-width:767px) {
+  .hero .beta-help-button {font-size:14px;min-height:44px;left:calc(100% + 4px);padding:0 4px}
+  .hero .beta-help-full {display:none}
+  .hero .beta-help-short {display:inline}
+}

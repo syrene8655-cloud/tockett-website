@@ -637,6 +637,7 @@ a:focus-visible,button:focus-visible,.media-track:focus-visible {outline:3px sol
 <link rel="stylesheet" href="assets/editor-modal-cards.css?v=20261021-screenshots"/>
 <script src="assets/editor-modal-cards.js?v=20261021-copy1" defer></script>
 <link rel="stylesheet" href="assets/homepage-help.css?v=20261021"/>
+<link rel="stylesheet" href="./assets/beta-access.css?v=4b2f0f68bcc6">
 <link rel="stylesheet" href="assets/content-site.css?v=20261021-language1">
 <link rel="stylesheet" href="assets/stock-status.css?v=0e6be5964e7a"><!-- Content metadata start -->
 <meta name="description" content="Tockett is an iPhone clock app. Its first clock, Airport Board, brings world time to flip clock widgets and Lock Screen Live Activities. Explore demos, setup guides and purchase details.">
@@ -671,7 +672,7 @@ a:focus-visible,button:focus-visible,.media-track:focus-visible {outline:3px sol
 </div>
 </h1>
 <div class="hero-content">
-<button aria-disabled="true" class="cta-button" disabled="" type="button"><span class="cta-platform">iOS</span> Beta soon</button>
+<!-- Beta controls start --><div class="beta-actions"><a class="cta-button" href="https://testflight.apple.com/join/uux9vRTU"><span class="cta-platform">iOS</span> Join the beta</a><button class="beta-help-button" type="button" popovertarget="beta-guide" aria-label="How to join the beta"><span class="beta-help-full">How to join</span><span class="beta-help-short">Help</span></button></div><!-- Beta controls end -->
 <p class="hero-tagline"><span>Playful clocks for your</span><span>Lock Screen and Home Screen.</span></p>
 </div>
 </div>
@@ -1013,5 +1014,6 @@ syncPromoAudio();
 const navLinks=[...document.querySelectorAll('.nav-pill-wrapper a')];
 function syncNav(){navLinks.forEach(a=>{const active=a.dataset.nav===({'#download':'download','#more-clocks':'more'}[location.hash]||'home');a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
 window.addEventListener('hashchange',syncNav);syncNav();
-</script><script src="assets/content-site.js?v=20261021-language1" defer></script>
+</script><!-- Beta guide start --><section class="beta-guide" id="beta-guide" popover="auto" aria-labelledby="beta-guide-title"><header class="beta-guide-heading"><h2 class="beta-guide-title" id="beta-guide-title">How to join the beta</h2><button class="beta-guide-close" type="button" popovertarget="beta-guide" popovertargetaction="hide" aria-label="Close guide">×</button></header><ol><li><a href="https://apps.apple.com/app/testflight/id899247664" target="_blank" rel="noopener">Install TestFlight</a>, Apple’s testing app, on your iPhone.</li><li><a href="https://testflight.apple.com/join/uux9vRTU">Open Tockett’s invitation</a> and tap “Accept” in TestFlight.</li><li>Tap “Install”, then open Tockett to try it.</li></ol><p class="beta-guide-note">Already have TestFlight? Open Tockett’s invitation directly. Follow these steps on your iPhone.</p></section><!-- Beta guide end -->
+<script src="assets/content-site.js?v=20261021-language1" defer></script>
 <script src="assets/stock-status.js?v=0e6be5964e7a" defer></script></body></html>

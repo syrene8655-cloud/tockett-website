@@ -1053,15 +1053,27 @@ const start = () => {
     Object.assign(trigger.style, { left: '0', top: '0', width: '100%', height: '100%' });
     slot.append(trigger);
     let engineStop;
+    let canvas;
+    let fail;
+    const stopEngine = () => { const cleanup = engineStop; engineStop = undefined; cleanup?.(); };
     let armed = false;
     const activate = () => {
       if (armed) return;
       armed = true;
       const wasFocused = document.activeElement === trigger;
-      const fail = () => { engineStop?.(); slot.dataset.peelState = 'fallback'; };
+      fail = () => {
+        stopEngine();
+        slot.classList.remove('peel-ready');
+        slot.querySelector('.sticker-peel')?.remove();
+        slot.dataset.peelState = 'fallback';
+      };
       try {
         engineStop = mountSticker(slot, image, label, fail);
         if (!engineStop) fail();
+        else {
+          canvas = slot.querySelector('canvas');
+          canvas?.addEventListener('webglcontextlost', fail, { once: true });
+        }
       } catch { fail(); }
       trigger.remove();
       if (wasFocused) slot.querySelector('.sticker-peel-hit')?.focus();
@@ -1072,7 +1084,8 @@ const start = () => {
       trigger.removeEventListener('pointerenter', activate);
       trigger.removeEventListener('focus', activate);
       trigger.remove();
-      engineStop?.();
+      canvas?.removeEventListener('webglcontextlost', fail);
+      stopEngine();
       slot.classList.remove('peel-ready');
       slot.removeAttribute('data-peel-state');
       slot.querySelector('.sticker-peel')?.remove();

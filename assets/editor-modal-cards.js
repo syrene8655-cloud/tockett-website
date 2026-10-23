@@ -222,7 +222,7 @@
     if (video) transferVideo(video);
     else {
       description.textContent = original.alt;
-      image.src = original.currentSrc || original.src;
+      image.src = original.dataset.fullSrc || original.currentSrc || original.src;
       image.alt = original.alt;
       image.width = original.naturalWidth;
       image.height = original.naturalHeight;

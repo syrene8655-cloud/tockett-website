@@ -1,0 +1,101 @@
+/* Elaya structure/spacing/type, bounded by the approved Tockett brand system. */
+.elaya-preview {font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+.elaya-preview h2,.elaya-preview h3,.elaya-preview h4 {text-wrap:balance}
+.elaya-preview p {text-wrap:pretty}
+.elaya-preview .nav-pill-wrapper {box-shadow:none;background:#181818}
+.elaya-preview .masthead .nav-item.active {background:var(--cream);box-shadow:none}
+.elaya-preview .elaya-eyebrow {font-size:12px;line-height:16px;font-weight:600;letter-spacing:.08em;margin:0 0 24px;color:var(--muted)}
+.elaya-preview .chapter-section {padding:64px 0 80px}
+.elaya-preview .airport-content {width:min(1344px,calc(100% - 96px))}
+.elaya-preview #clocks .chapter-header {display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin:0 0 48px}
+.elaya-preview .chapter-meta {min-width:0}
+.elaya-preview .chapter-sub {font-size:18px;line-height:28px;max-width:680px;margin-top:24px}
+.elaya-preview .product-detail-link {margin:0;flex:none;font-size:14px;line-height:20px;padding-bottom:4px}
+.elaya-preview .product-detail-link a,.elaya-preview .section-text-link {min-height:44px;display:inline-flex;align-items:center}
+.elaya-preview .airport-row-heading {margin-bottom:24px}
+.elaya-preview .airport-row-heading h3 {font-size:24px;line-height:32px;font-weight:600}
+.elaya-preview .media-caption,.elaya-preview .media-caption strong {font-size:14px;line-height:20px}
+.elaya-preview .elaya-benefits {display:grid;grid-template-columns:1.2fr 1fr;gap:96px;align-items:start;background:var(--cream);padding:64px;margin:80px 0}
+.elaya-preview .elaya-benefit-copy h2 {font-size:48px;line-height:1.2;font-weight:600;letter-spacing:-.035em;margin:0 0 24px;max-width:680px}
+.elaya-preview .elaya-benefit-copy>p:last-child {font-size:16px;line-height:24px;max-width:32em;color:var(--muted)}
+.elaya-preview .elaya-outcomes {display:grid;gap:32px;padding-top:0}
+.elaya-preview .elaya-outcomes .elaya-eyebrow {margin-bottom:8px}
+.elaya-preview .elaya-outcomes h3 {font-size:20px;line-height:28px;font-weight:600;margin:0 0 8px}
+.elaya-preview .elaya-outcomes article>p:last-child {font-size:16px;line-height:24px;color:var(--muted);max-width:32em}
+.elaya-preview .elaya-benefit-copy h2 span {color:var(--forest);transition:color .8s cubic-bezier(.32,.72,0,1)}
+.elaya-preview.elaya-motion .elaya-benefit-copy h2 span:not(.is-read) {color:#748172}
+.elaya-preview .editor-section {margin-top:0;padding-top:0;border:0}
+.elaya-preview .editor-layout {grid-template-columns:minmax(240px,.85fr) minmax(0,2fr);gap:64px}
+.elaya-preview .editor-details {display:grid;gap:32px}
+.elaya-preview .editor-details h4 {font-size:20px;line-height:28px;margin-bottom:12px;font-weight:600}
+.elaya-preview .editor-details p {font-size:16px;line-height:24px;max-width:30em}
+.elaya-preview .editor-details .elaya-stock-note {font-size:14px;line-height:20px;color:var(--muted);padding:16px;background:var(--paper);max-width:30em}
+.elaya-preview .help-section {padding:80px 48px 96px}
+.elaya-preview .help-layout {max-width:1344px;grid-template-columns:.85fr 2fr;gap:64px}
+.elaya-preview .help-intro h2 {font-size:36px;line-height:40px;margin-bottom:24px}
+.elaya-preview .help-intro p,.elaya-preview .faq-answer p {font-size:16px;line-height:24px;max-width:65ch}
+.elaya-preview .topic-link {padding:24px 0}
+.elaya-preview .topic-text strong {font-size:18px;line-height:28px}
+.elaya-preview .topic-text>span {font-size:14px;line-height:20px;max-width:65ch}
+.elaya-preview .faq {margin-top:48px}
+.elaya-preview .faq h3 {font-size:24px;line-height:32px;margin-bottom:24px}
+.elaya-preview .faq-item summary {padding:24px 0;font-size:16px;line-height:24px;min-height:72px}
+.elaya-preview .faq-answer {padding:0 32px 24px 0}
+.elaya-preview .coming-section {padding:64px 48px;background:var(--paper-warm)}
+.elaya-preview .coming-inner {max-width:1344px;gap:64px}
+.elaya-preview .coming-title {font-size:36px;line-height:40px}
+.elaya-preview .coming-desc {font-size:16px;line-height:24px}
+.elaya-preview .elaya-closing {padding:64px max(48px,calc((100vw - 1344px)/2));display:flex;align-items:center;justify-content:space-between;gap:48px;background:var(--forest);color:var(--cream)}
+.elaya-preview .elaya-closing .elaya-eyebrow {color:var(--cream);margin-bottom:16px}
+.elaya-preview .elaya-closing h2 {font-size:48px;line-height:1.2;font-weight:600;letter-spacing:-.025em;margin:0 0 16px}
+.elaya-preview .elaya-closing p:last-child {font-size:16px;line-height:24px;max-width:45ch}
+.elaya-preview .elaya-closing .cta-button {flex:none;display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:48px;padding:12px 24px;font-size:16px;line-height:24px;font-weight:600;background:#e16a10;color:white;border:3px solid white;border-radius:999px}
+.elaya-preview .site-footer {padding:24px 48px;background:#181818}
+.elaya-preview .footer-links {gap:8px 24px}
+.elaya-preview a:focus-visible,.elaya-preview summary:focus-visible {outline:2px solid var(--orange);outline-offset:4px}
+.elaya-skip {position:absolute;z-index:60;top:8px;left:16px;transform:translateY(-200%);background:var(--cream);padding:12px 16px;color:var(--forest)}
+.elaya-skip:focus {transform:none}
+@media(hover:hover) and (pointer:fine) {.elaya-preview .elaya-closing .cta-button:hover{background:#c95b08}.elaya-preview .topic-link:hover{background:#deded6}}
+.elaya-preview .elaya-closing .cta-button:active {transform:scale(.98)}
+@media(max-width:1100px) {.elaya-preview .elaya-benefits{gap:48px;padding:48px}.elaya-preview .elaya-benefit-copy h2{font-size:36px;line-height:40px}.elaya-preview .editor-layout,.elaya-preview .help-layout{gap:32px}}
+@media(max-width:767px) {
+ .elaya-preview .chapter-section {padding:40px 0 48px}
+ .elaya-preview .airport-content {width:calc(100% - 32px)}
+ .elaya-preview #clocks .chapter-header {display:block;margin-bottom:32px}
+ .elaya-preview .elaya-eyebrow {margin-bottom:16px}
+ .elaya-preview .chapter-sub {font-size:16px;line-height:24px;margin-top:16px}
+ .elaya-preview .product-detail-link {margin-top:16px}
+ .elaya-preview .airport-row-heading h3 {font-size:20px;line-height:28px}
+ .elaya-preview .elaya-benefits {grid-template-columns:1fr;gap:40px;padding:32px 24px;margin:48px 0}
+ .elaya-preview .elaya-benefit-copy h2 {font-size:30px;line-height:36px;letter-spacing:-.03em}
+ .elaya-preview .elaya-outcomes {gap:32px}
+ .elaya-preview .editor-layout {grid-template-columns:1fr;gap:32px}
+ .elaya-preview .editor-details {grid-template-columns:1fr;gap:24px}
+ .elaya-preview .help-section {padding:48px 16px 64px}
+ .elaya-preview .help-layout {grid-template-columns:1fr;gap:40px}
+ .elaya-preview .help-intro h2,.elaya-preview .coming-title {font-size:30px;line-height:36px}
+ .elaya-preview .coming-section {padding:48px 16px}
+ .elaya-preview .coming-inner {display:block}
+ .elaya-preview .coming-desc {margin-top:24px}
+ .elaya-preview .elaya-closing {padding:48px 24px;display:block}
+ .elaya-preview .elaya-closing h2 {font-size:36px;line-height:40px}
+ .elaya-preview .elaya-closing .cta-button {margin-top:32px}
+ .elaya-preview .site-footer {padding:24px 16px}
+}
+@media(prefers-reduced-motion:reduce) {.elaya-preview .elaya-benefit-copy h2 span{transition:none}.elaya-preview.elaya-motion .elaya-benefit-copy h2 span:not(.is-read){color:var(--forest)}}
+/* Keep the extended reading layout explicit in the standalone preview. */
+.elaya-preview .help-layout {display:grid;width:100%;margin:0 auto;align-items:start}
+.elaya-preview .help-body {min-width:0}
+.elaya-preview .topic-link {display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px;border-bottom:1px solid #c9ccc3}
+.elaya-preview .topic-text {display:grid;gap:8px}
+.elaya-preview .faq-list {border-top:1px solid #c9ccc3}
+.elaya-preview .faq-item {border-bottom:1px solid #c9ccc3}
+.elaya-preview .faq-item summary {display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none}
+.elaya-preview .faq-item summary::-webkit-details-marker {display:none}
+.elaya-preview .faq-mark {position:relative;width:16px;height:16px;flex:none}
+.elaya-preview .faq-mark::before,.elaya-preview .faq-mark::after {content:'';position:absolute;background:currentColor}
+.elaya-preview .faq-mark::before {left:0;top:7px;width:16px;height:2px}
+.elaya-preview .faq-mark::after {left:7px;top:0;width:2px;height:16px}
+.elaya-preview .faq-item[open] .faq-mark::after {display:none}
+html[lang^="zh"] .elaya-preview .elaya-benefit-copy h2 span {display:inline-block}
+@media(max-width:767px) {html[lang^="zh"] .elaya-preview .elaya-benefit-copy h2 {font-size:24px;line-height:32px;letter-spacing:0}}

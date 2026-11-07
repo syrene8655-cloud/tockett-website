@@ -14,12 +14,39 @@
 <link rel="stylesheet" href="../../assets/original/split-flap-title.css">
 <link rel="stylesheet" href="../../assets/editor-modal-cards.css?v=20261021-screenshots">
 <link rel="stylesheet" href="../../assets/beta-access.css?v=aa598d7fafa4">
+<style id="release-badge-style">
+.hero .hero-tagline {font-weight:600;color:var(--cream);opacity:1}
+.hero .hero-content {gap:8px}
+.release-store-badge {position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:160px;height:auto;min-width:0;min-height:0;margin:6px 16px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;opacity:1;vertical-align:middle;text-decoration:none;cursor:pointer}
+.release-store-badge > img {display:block;width:100%;height:auto;max-width:none;margin:0;object-fit:contain}
+.release-pointing-glove {display:none;pointer-events:none;user-select:none}
+.hero .release-pointing-glove {position:absolute;display:block;z-index:2;left:calc(100% - 12px);top:0;width:64px;transform:translateY(-48%) rotate(-20deg)}
+.release-pointing-glove img {display:block;width:100%;height:auto;margin:0;max-width:none}
+.release-store-badge:disabled {opacity:1;cursor:default}
+.release-store-badge:focus-visible {outline:2px solid currentColor;outline-offset:6px}
+@media (min-width:768px) {
+  .hero .hero-center-art {margin-bottom:-28px}
+  .hero .hero-tagline,html[lang^="en"] .hero .hero-tagline {font-size:calc(18px / var(--hero-scale))}
+  .hero-stage .release-store-badge {width:213.3333px;margin:6px 24px}
+  .hero .release-pointing-glove {left:calc(100% - 18px);width:calc(72px / var(--hero-scale))}
+}
+@media (min-width:1280px) {
+  .hero-stage .release-store-badge {width:clamp(213.3333px,calc(14.1111 * var(--scene-unit)),266.6667px)}
+}
+@media (max-width:767px) {
+  .hero .hero-content {top:calc(98.359375 * var(--mobile-unit));gap:6px}
+  .hero-stage {--mobile-flow-offset:calc(24px * var(--mobile-tagline-lines) + 44px - 68 * var(--mobile-unit) + 20px)}
+}
+@media (max-width:359px) {
+  .hero .release-pointing-glove {left:calc(100% - 10px);width:48px}
+}
+</style>
 </head>
 <body class="content-page" id="top">
 <a class="content-skip" href="#main">跳到正文</a>
 <header class="masthead">
 <div class="brand-group"><a href="../../zh/" aria-label="咔哒首页"><img alt="咔哒" class="brand-lockup-img" src="../../assets/zh/tockett-zh-01-standard-horizontal.svg" width="130.58825917" height="42"></a></div>
-<nav aria-label="页面导航" class="nav-pill-wrapper"><a class="nav-item" data-nav="home" href="../../zh/">首页</a><a class="nav-item" data-nav="more" href="../../zh/#more-clocks">更多时钟</a><a class="nav-item" data-nav="guides" href="../../guides/">使用指南</a><a class="nav-item" data-nav="download" href="../../zh/#download">内测</a></nav>
+<nav aria-label="页面导航" class="nav-pill-wrapper"><a class="nav-item" data-nav="home" href="../../zh/">首页</a><a class="nav-item" data-nav="more" href="../../zh/#more-clocks">更多时钟</a><a class="nav-item" data-nav="guides" href="../../guides/">使用指南</a><a class="nav-item" data-nav="download" href="../../zh/#download">下载</a></nav>
 <details class="site-language-picker"><summary class="site-language" aria-label="选择语言" title="语言"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></summary><nav class="language-menu" aria-label="语言"><a href="../../en/clocks/airport-board/" lang="en" hreflang="en" aria-label="English"><span>EN</span><span class="language-check"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8 3 3 7-7"/></svg></span></a><a href="./" lang="zh-CN" hreflang="zh-Hans" aria-label="简体中文" aria-current="page"><span>中文</span><span class="language-check"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8 3 3 7-7"/></svg></span></a></nav></details>
 </header>
 <main id="main" class="reading-shell">
@@ -27,7 +54,7 @@
 <div class="reading-heading"><h1 id="airport-title" class="split-flap-text"><span class="split-flap-text__sr">机场牌</span><span class="split-flap-text__tile" data-char="机" aria-hidden="true"><span class="split-flap-text__half split-flap-text__half--top"><span class="split-flap-text__char">机</span></span><span class="split-flap-text__half split-flap-text__half--bottom"><span class="split-flap-text__char">机</span></span></span><span class="split-flap-text__tile" data-char="场" aria-hidden="true"><span class="split-flap-text__half split-flap-text__half--top"><span class="split-flap-text__char">场</span></span><span class="split-flap-text__half split-flap-text__half--bottom"><span class="split-flap-text__char">场</span></span></span><span class="split-flap-text__tile" data-char="牌" aria-hidden="true"><span class="split-flap-text__half split-flap-text__half--top"><span class="split-flap-text__char">牌</span></span><span class="split-flap-text__half split-flap-text__half--bottom"><span class="split-flap-text__char">牌</span></span></span></h1><p class="page-summary">机场牌是咔哒 Tockett 的第一款时钟，用机场机械翻牌的形式显示多个城市的当地时间。App 内免费编辑与观看，一次购买可解锁桌面小组件、锁屏实况与灵动岛，无须订阅。</p><p class="page-byline">Tockett · 更新于 <time datetime="2026-10-22">2026-10-22</time></p></div>
 <details class="mobile-toc"><summary>本页目录</summary><nav aria-label="本页目录"><a href="#your-board">把关心的城市时间，排成一块翻牌时钟</a><a href="#keep-in-touch">联系之前，先看对方几点</a><a href="#screens">放在哪里看</a><a href="#configuration">各个场景分别编辑</a><a href="#compatibility">兼容性与购买范围</a><a href="#limits">使用前了解这些限制</a><a href="#setup">从这里开始设置</a></nav></details>
 <div class="reading-columns"><article class="reading-body"><h2 id="your-board">把关心的城市时间，排成一块翻牌时钟</h2>
-<p>添加城市，查看当地时间、时区和昼夜，再按自己的顺序排列。你可以只放世界时钟，也可以加入所选股票信息。股票行情为实验性功能，不保证准确、及时或持续可用；具体范围见本页<a href="#compatibility">购买与服务说明</a>。</p>
+<p>添加城市，查看当地时间、时区和昼夜，再按自己的顺序排列。你可以只放世界时钟，也可以加入所选股票信息。股票行情供日常参考，报价可能延迟，请勿用于交易决策。具体范围见本页<a href="#compatibility">购买与服务说明</a>。</p>
 <figure class="board-figure"><button class="editor-modal-trigger screenshot-crop screenshot-crop--board" type="button" aria-haspopup="dialog" aria-controls="editor-image-modal"><img src="../../assets/IMG_8161.PNG" alt="App 内横屏机场牌，六个城市时间与两只股票分组展示" width="2868" height="1320" loading="lazy"><svg class="editor-expand-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M3 10h14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button><figcaption>App 内横屏机场牌</figcaption></figure>
 <dl class="board-field-key"><div><dt>世界时钟</dt><dd>CITY 是城市，UTC 是时区偏移，D/N 图标表示当地昼夜，TIME 显示当地时间。</dd></div><div><dt>股票信息</dt><dd>TICKER 是代码，MARKET 是所属市场，CHANGE % 是涨跌幅，PRICE 后的标签是币种。</dd></div></dl>
 <h2 id="keep-in-touch">联系之前，先看对方几点</h2>
@@ -40,18 +67,19 @@
 <p>App 看板、桌面和锁屏实况分别保存内容，灵动岛单独选一项，收藏共用。编辑后点“完成”保存。实况运行时，保存不会立即替换系统中的内容，需在状态页点“应用新配置”。</p>
 <p>涨跌颜色可按交易所习惯，也可统一为红涨绿跌或绿涨红跌。查看<a href="../../guides/add-home-screen-widget/#stock-colors">涨跌配色设置</a>。</p>
 <h2 id="compatibility">兼容性与购买范围</h2>
-<p>适用于 iOS 18 及以上的 iPhone；灵动岛需支持该功能的机型。App 内看板、编辑和收藏永久免费；桌面小组件、锁屏实况与灵动岛共用机场牌的一次买断，无须订阅，后续表盘另购。实际价格以 App Store 为准。</p>
+<p>支持 iOS 18 及以上的 iPhone 和 iPadOS 18 及以上的 iPad；灵动岛仅适用于兼容 iPhone。App 内看板、编辑和收藏永久免费；桌面小组件、锁屏实况与兼容 iPhone 的灵动岛共用机场牌的一次买断。同一 Apple 账户下的 iPhone 和 iPad 均可使用；未识别已购权益时可恢复购买。无须订阅，后续表盘另购。实际价格以 App Store 为准。</p>
 <p>App 界面支持简体中文、繁体中文和英文，可在设置中选择。商店介绍所用语言不代表 App 界面已经支持该语言。</p>
-<p>买断解锁的是机场牌在桌面小组件、锁屏实况与灵动岛的使用权益。股票行情服务器维护成本较高，服务也存在不稳定性，因此<strong>股票行情目前作为实验性功能提供，行情服务本身不计入产品售价</strong>。我们不保证行情始终准确、及时或持续可用；行情可能延迟、出错、中断或暂停，请勿作为交易决策依据。</p>
+<p>买断解锁的是机场牌在桌面小组件、锁屏实况与灵动岛的使用权益。<strong>股票行情作为附加参考信息提供，买断费用对应表盘的使用权益</strong>。报价受数据源与网络状况影响，可能延迟、出错或暂时无法更新，仅供参考，请勿用于交易决策。</p>
 <h2 id="limits">使用前了解这些限制</h2>
 <ul><li>实况计划每轮运行7小时59分钟。受 iOS 实时活动机制限制，每次最多运行8小时，也可能提前结束。结束后灵动岛会移除，锁屏卡片可能额外保留最多4小时；仍显示不代表仍在更新，时间、日夜状态或行情可能已过期。请打开 App 重新开启，或移除旧卡片。</li><li>股票行情可能延迟、出错、中断或暂停。没有有效报价时显示横线，城市时钟可以继续使用。</li><li>App 中的桌面或锁屏预览，不代表已经添加小组件或开启系统实况。</li></ul>
 <h2 id="setup">从这里开始设置</h2>
 <div class="topic-list"><a class="topic-link" href="../../guides/add-home-screen-widget/"><span class="topic-text"><strong>如何添加机场牌桌面小组件</strong><span>在咔哒保存桌面内容，再从 iPhone 小组件库添加机场牌。</span></span><span aria-hidden="true">↗</span></a><a class="topic-link" href="../../guides/start-lock-screen-live-activity/"><span class="topic-text"><strong>如何开启机场牌锁屏实况与灵动岛</strong><span>在咔哒的“实况”中保存内容，再到“锁屏与灵动岛”状态页开启。两者同时启动，每轮最多运行8小时，也可能提前结束。结束后的锁屏卡片仍可能保留。</span></span><span aria-hidden="true">↗</span></a></div>
-<div class="content-download"><a class="content-download-button" href="https://testflight.apple.com/join/uux9vRTU"><svg class="cta-apple" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg> 参与内测</a><details class="beta-inline-help"><summary>如何参与内测</summary><div class="beta-inline-steps"><ol><li><a href="https://apps.apple.com/app/testflight/id899247664" target="_blank" rel="noopener">安装 TestFlight</a>：先在 iPhone 上安装 Apple 的测试 App。</li><li><a href="https://testflight.apple.com/join/uux9vRTU">接受咔哒邀请</a>：打开邀请，在 TestFlight 中点“接受”。</li><li>点“安装”，完成后打开咔哒即可体验。</li></ol><p class="beta-guide-note">已安装 TestFlight？直接打开咔哒邀请即可。请在 iPhone 上操作。</p></div></details><p>内测期间全部功能开放，无需购买。通过 TestFlight 安装。</p></div>
+<div class="content-download"><a class="release-store-badge" href="https://apps.apple.com/cn/app/id6822434767"><img src="/release-assets/app-store-en.svg" alt="Download on the App Store" width="180" height="60"><span class="release-pointing-glove" aria-hidden="true"><img src="/release-assets/pointing-glove-v1.png" alt="" width="1536" height="1024"></span></a><p>正式版现已在 App Store 上架。请通过 App Store 下载。</p></div>
 </article><aside class="desktop-toc"><nav aria-label="本页目录"><h2>本页目录</h2><a href="#your-board">把关心的城市时间，排成一块翻牌时钟</a><a href="#keep-in-touch">联系之前，先看对方几点</a><a href="#screens">放在哪里看</a><a href="#configuration">各个场景分别编辑</a><a href="#compatibility">兼容性与购买范围</a><a href="#limits">使用前了解这些限制</a><a href="#setup">从这里开始设置</a></nav></aside></div>
 <nav class="related-content" aria-label="继续了解"><h2>继续了解</h2><a href="../../guides/">使用指南 ↗</a><a href="../../support/">使用帮助 ↗</a></nav>
 </main>
-<footer class="site-footer"><span>Tockett / 咔哒 © 2026</span><nav class="footer-links" aria-label="使用帮助"><a href="../../guides/">使用指南</a><a href="../../support/">使用帮助</a><a href="../../stock-service/">股票行情服务状态</a><a href="mailto:syrene8655@gmail.com">联系反馈</a><a class="discord-link" href="https://discord.gg/tuAfUPDQn" target="_blank" rel="noopener noreferrer"><img src="../../assets/discord-symbol-white.svg" width="20" height="15" alt="" aria-hidden="true">加入 Discord 社区</a><a href="../../privacy/">隐私政策</a><a href="#top">回到顶部 ↑</a></nav></footer>
+<footer class="site-footer"><span>Tockett / 咔哒 © 2026</span><nav class="footer-links" aria-label="使用帮助"><a href="../../guides/">使用指南</a><a href="../../support/">使用帮助</a><a href="../../stock-service/">股票行情服务状态</a><a href="mailto:syrene8655@gmail.com">联系反馈</a><a class="discord-link" href="https://discord.gg/tuAfUPDQn" target="_blank" rel="noopener noreferrer"><img src="../../assets/discord-symbol-white.svg" width="20" height="15" alt="" aria-hidden="true">加入 Discord 社区</a><a href="../../privacy/">隐私政策</a><a href="#top">回到顶部 ↑</a><a href="../../changelog/">更新日志</a></nav></footer>
 <script src="../../assets/content-site.js?v=20261021-language1" defer></script>
 <script src="../../assets/editor-modal-cards.js?v=20261021-copy1" defer></script>
+<script src="/release-assets/pointing-glove-motion.js" defer></script>
 </body></html>

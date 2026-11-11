@@ -22,7 +22,7 @@ jobs:
       - name: Package public files
         run: |
           mkdir _site
-          cp -R assets clocks guides support stock-service privacy en zh changelog release-assets _site/
+          cp -R assets clocks guides support stock-service privacy en zh changelog release-assets dual-assets _site/
           cp index.html en.html zh.html privacy.html privacy-en.html robots.txt sitemap.xml CNAME .nojekyll _site/
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
         with:
